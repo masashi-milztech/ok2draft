@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Logo } from './Logo';
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,7 +29,6 @@ export const Header: React.FC = () => {
     const element = document.getElementById(targetId);
     
     if (element) {
-      // Get the header height for offset (approx 80px or dynamic)
       const headerOffset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
@@ -52,13 +52,13 @@ export const Header: React.FC = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        {/* Logo - Reduced weight to semibold */}
+        {/* Logo */}
         <a 
           href="#top" 
           onClick={(e) => handleNavClick(e, '#top')}
-          className="text-2xl font-semibold tracking-tighter text-ok-black inline-block group cursor-pointer"
+          className="inline-block cursor-pointer hover:opacity-80 transition-opacity"
         >
-          OK<span className="text-xs font-semibold ml-0.5 group-hover:text-blue-600 transition-colors relative -top-3">2</span><span className="ml-0.5 text-lg font-semibold">inc.</span>
+          <Logo variant="header" />
         </a>
 
         {/* Desktop Nav */}

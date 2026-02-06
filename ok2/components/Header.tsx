@@ -52,23 +52,23 @@ export const Header: React.FC = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        {/* Logo - Updated to match Business Card (Heavier weight) */}
+        {/* Logo - Reduced weight from black to bold */}
         <a 
           href="#top" 
           onClick={(e) => handleNavClick(e, '#top')}
-          className="text-2xl font-black tracking-tighter text-ok-black inline-block group cursor-pointer"
+          className="text-2xl font-bold tracking-tighter text-ok-black inline-block group cursor-pointer"
         >
-          OK<span className="text-xs font-black ml-0.5 group-hover:text-blue-600 transition-colors relative -top-3">2</span><span className="ml-0.5 text-lg font-black">inc.</span>
+          OK<span className="text-xs font-bold ml-0.5 group-hover:text-blue-600 transition-colors relative -top-3">2</span><span className="ml-0.5 text-lg font-bold">inc.</span>
         </a>
 
-        {/* Desktop Nav */}
+        {/* Desktop Nav - Reduced weight */}
         <nav className="hidden md:flex space-x-8">
           {navLinks.map((link) => (
             <a 
               key={link.name} 
               href={link.href} 
               onClick={(e) => handleNavClick(e, link.href)}
-              className="text-sm font-bold text-ok-black hover:text-gray-500 tracking-wider transition-colors"
+              className="text-sm font-medium text-ok-black hover:text-gray-500 tracking-wider transition-colors"
             >
               {link.name}
             </a>
@@ -93,7 +93,7 @@ export const Header: React.FC = () => {
                 key={link.name} 
                 href={link.href} 
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-2xl font-black text-ok-black"
+                className="text-2xl font-bold text-ok-black"
               >
                 {link.name}
               </a>

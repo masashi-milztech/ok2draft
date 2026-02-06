@@ -11,11 +11,11 @@ export const Hero: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-6 z-10 text-center">
-        {/* Logo - Reduced weight from black to bold */}
-        <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-ok-black mb-6 leading-tight">
-          OK<span className="text-3xl md:text-5xl font-bold ml-1 relative -top-6 md:-top-10">2</span><span className="ml-2 text-5xl md:text-7xl font-bold">inc.</span>
+        {/* Logo - Reduced weight from bold to semibold for elegance */}
+        <h1 className="text-6xl md:text-8xl font-semibold tracking-tighter text-ok-black mb-6 leading-tight">
+          OK<span className="text-3xl md:text-5xl font-semibold ml-1 relative -top-6 md:-top-10">2</span><span className="ml-2 text-5xl md:text-7xl font-semibold">inc.</span>
         </h1>
-        {/* Subtitle - Reduced weight for elegance */}
+        {/* Subtitle - Light and clean */}
         <div className="flex flex-col md:flex-row items-center justify-center space-y-2 md:space-y-0 md:space-x-4 text-sm md:text-xl font-normal tracking-widest text-gray-600 uppercase mt-4">
           <span>Consulting</span>
           <span className="hidden md:inline text-gray-300">/</span>

@@ -40,9 +40,9 @@ export const Footer: React.FC = () => {
               onClick={(e) => handleNavClick(e, '#top')}
               className="text-xl font-black tracking-tighter text-ok-black hover:text-gray-600 transition-colors inline-block cursor-pointer"
             >
-              OK<sup className="text-xs">2</sup> inc.
+              OK<span className="text-xs font-black ml-0.5 relative -top-2">2</span><span className="ml-0.5 font-black">inc.</span>
             </a>
-            <p className="mt-2 text-xs text-gray-400 leading-relaxed">
+            <p className="mt-2 text-xs text-gray-500 font-medium leading-relaxed">
               Consulting / Planning / Connecting<br />
               Creating new value for the future.
             </p>
@@ -62,7 +62,7 @@ export const Footer: React.FC = () => {
           </nav>
         </div>
         
-        <div className="border-t border-gray-100 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
+        <div className="border-t border-gray-100 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 font-medium">
            <div className="flex space-x-4 mb-4 md:mb-0">
              <a href="#" className="hover:text-ok-black transition-colors">Privacy Policy</a>
              <a href="#" className="hover:text-ok-black transition-colors">Terms of Use</a>

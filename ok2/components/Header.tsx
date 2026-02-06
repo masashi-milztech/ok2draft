@@ -52,16 +52,16 @@ export const Header: React.FC = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        {/* Logo - Reduced weight from black to bold */}
+        {/* Logo - Reduced weight to semibold */}
         <a 
           href="#top" 
           onClick={(e) => handleNavClick(e, '#top')}
-          className="text-2xl font-bold tracking-tighter text-ok-black inline-block group cursor-pointer"
+          className="text-2xl font-semibold tracking-tighter text-ok-black inline-block group cursor-pointer"
         >
-          OK<span className="text-xs font-bold ml-0.5 group-hover:text-blue-600 transition-colors relative -top-3">2</span><span className="ml-0.5 text-lg font-bold">inc.</span>
+          OK<span className="text-xs font-semibold ml-0.5 group-hover:text-blue-600 transition-colors relative -top-3">2</span><span className="ml-0.5 text-lg font-semibold">inc.</span>
         </a>
 
-        {/* Desktop Nav - Reduced weight */}
+        {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-8">
           {navLinks.map((link) => (
             <a 

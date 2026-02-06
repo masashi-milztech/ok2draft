@@ -1,4 +1,5 @@
 import React from 'react';
+import { Logo } from './Logo';
 
 export const Footer: React.FC = () => {
   const navLinks = [
@@ -38,9 +39,9 @@ export const Footer: React.FC = () => {
             <a 
               href="#top" 
               onClick={(e) => handleNavClick(e, '#top')}
-              className="text-xl font-semibold tracking-tighter text-ok-black hover:text-gray-600 transition-colors inline-block cursor-pointer"
+              className="inline-block cursor-pointer mb-3 hover:opacity-80 transition-opacity"
             >
-              OK<span className="text-xs font-semibold ml-0.5 relative -top-2">2</span><span className="ml-0.5 font-semibold">inc.</span>
+              <Logo variant="footer" />
             </a>
             <p className="mt-2 text-xs text-gray-500 font-medium leading-relaxed">
               Consulting / Planning / Connecting<br />

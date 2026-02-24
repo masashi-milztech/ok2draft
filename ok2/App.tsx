@@ -6,7 +6,6 @@ import { ProjectGrid } from './components/ProjectGrid';
 import { Company } from './components/Profile';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
-import { AIConsultant } from './components/AIConsultant';
 
 const App: React.FC = () => {
   return (
@@ -20,7 +19,6 @@ const App: React.FC = () => {
         <Contact />
       </main>
       <Footer />
-      <AIConsultant />
     </div>
   );
 };

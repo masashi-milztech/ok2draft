@@ -20,7 +20,7 @@ const projects: Project[] = [
   },
   {
     id: '3',
-    title: 'Connecting',
+    title: 'コネクティング',
     category: 'Connecting',
     description: 'Connecting artists with tech firms for a unique exhibition.',
     imageUrl: 'https://picsum.photos/800/600?random=3',
@@ -36,7 +36,7 @@ const projects: Project[] = [
   },
   {
     id: '5',
-    title: 'Consulting',
+    title: 'コンサルティング',
     category: 'Planning',
     description: 'Concept and execution of a high-end pop-up.',
     imageUrl: 'https://picsum.photos/800/600?random=5',
@@ -44,7 +44,7 @@ const projects: Project[] = [
   },
   {
     id: '6',
-    title: 'Planning',
+    title: 'プランニング',
     category: 'Connecting',
     description: 'Matching investors with promising early-stage startups.',
     imageUrl: 'https://picsum.photos/800/600?random=6',

@@ -1,88 +1,70 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Project } from '../types';
 
 const projects: Project[] = [
   {
     id: '1',
-    title: 'Global Retail Strategy',
+    title: '新規事業支援',
     category: 'Consulting',
     description: 'Market entry strategy for a leading apparel brand.',
     imageUrl: 'https://picsum.photos/800/600?random=1',
-    tags: ['#Strategy', '#Global', '#Retail']
+    tags: []
   },
   {
     id: '2',
-    title: 'Urban Brand Renewal',
+    title: 'リブランディング',
     category: 'Planning',
     description: 'Rebranding campaign for a Shibuya-based lifestyle store.',
     imageUrl: 'https://picsum.photos/800/600?random=2',
-    tags: ['#Branding', '#Design', '#Tokyo']
+    tags: []
   },
   {
     id: '3',
-    title: 'Tech x Art Exhibition',
+    title: 'Connecting',
     category: 'Connecting',
     description: 'Connecting artists with tech firms for a unique exhibition.',
     imageUrl: 'https://picsum.photos/800/600?random=3',
-    tags: ['#Event', '#Art', '#Tech']
+    tags: []
   },
   {
     id: '4',
-    title: 'Sustainable Supply Chain',
+    title: '企業再生',
     category: 'Consulting',
     description: 'Optimizing logistics for sustainability goals.',
     imageUrl: 'https://picsum.photos/800/600?random=4',
-    tags: ['#SDGs', '#Logistics']
+    tags: []
   },
   {
     id: '5',
-    title: 'Pop-up Store Ginza',
+    title: 'Consulting',
     category: 'Planning',
     description: 'Concept and execution of a high-end pop-up.',
     imageUrl: 'https://picsum.photos/800/600?random=5',
-    tags: ['#SpaceDesign', '#Luxury']
+    tags: []
   },
   {
     id: '6',
-    title: 'Start-up Accelerator',
+    title: 'Planning',
     category: 'Connecting',
     description: 'Matching investors with promising early-stage startups.',
     imageUrl: 'https://picsum.photos/800/600?random=6',
-    tags: ['#Investment', '#Startup']
+    tags: []
   }
 ];
 
 export const ProjectGrid: React.FC = () => {
-  const [filter, setFilter] = useState<'All' | 'Consulting' | 'Planning' | 'Connecting'>('All');
-
-  const filteredProjects = filter === 'All' 
-    ? projects 
-    : projects.filter(p => p.category === filter);
+  const filteredProjects = projects;
 
   return (
     <section id="works" className="py-24 bg-white">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
-             <h2 className="text-xs font-bold tracking-[0.2em] text-gray-400 mb-2 uppercase">Works</h2>
-             <h3 className="text-3xl font-bold text-ok-black">Case Studies</h3>
+             <h2 className="text-xs font-bold tracking-[0.2em] text-gray-400 mb-2 uppercase">Service</h2>
+             <h3 className="text-3xl font-bold text-ok-black">Service</h3>
           </div>
           
-          <div className="flex flex-wrap gap-4 mt-6 md:mt-0">
-            {['All', 'Consulting', 'Planning', 'Connecting'].map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setFilter(cat as any)}
-                className={`text-sm px-4 py-2 rounded-full border transition-all duration-300 ${
-                  filter === cat 
-                    ? 'bg-ok-black text-white border-ok-black' 
-                    : 'bg-white text-gray-500 border-gray-200 hover:border-gray-400'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
+
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
@@ -95,11 +77,6 @@ export const ProjectGrid: React.FC = () => {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
-                
-                {/* Overlay Badge */}
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 text-xs font-bold tracking-wider uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -translate-y-2 group-hover:translate-y-0">
-                  {project.category}
-                </div>
               </div>
               
               <div className="flex flex-col items-start">

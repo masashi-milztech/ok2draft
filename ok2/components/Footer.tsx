@@ -4,7 +4,7 @@ import { Logo } from './Logo';
 export const Footer: React.FC = () => {
   const navLinks = [
     { name: 'PHILOSOPHY', href: '#philosophy' },
-    { name: 'WORKS', href: '#works' },
+    { name: 'SERVICE', href: '#works' },
     { name: 'COMPANY', href: '#company' },
     { name: 'CONTACT', href: '#contact' },
   ];
